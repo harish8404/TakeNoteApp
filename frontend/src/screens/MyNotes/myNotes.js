@@ -1,14 +1,25 @@
-import React from "react";
+import { useEffect } from "react";
 import { Accordion, Badge, Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import MainScreen from "../../components/MainScreen";
 import notes from "../../data/data";
+import axios from "axios";
 
-const myNotes = () => {
+const MyNotes = () => {
   const deleteHandler = (id) => {
     if (window.confirm("Are you sure?")) {
     }
   };
+
+  const fetchNotes = async () => {
+    const data = await axios.get("http://localhost:5000");
+    console.log(data);
+  };
+
+  useEffect(() => {
+    fetchNotes();
+  }, []);
+
   return (
     <div>
       <MainScreen title="Welcome Back Harish">
@@ -68,4 +79,4 @@ const myNotes = () => {
   );
 };
 
-export default myNotes;
+export default MyNotes;

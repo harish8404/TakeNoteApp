@@ -3,7 +3,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import { BrowserRouter, Route } from "react-router-dom";
 import landingPage from "./screens/LandingPage/landingPage";
-import myNotes from "./screens/MyNotes/myNotes";
+import myNotes from "./screens/MyNotes/MyNotes";
 import myProfile from "./screens/MyProfile/myProfile";
 
 function App() {
