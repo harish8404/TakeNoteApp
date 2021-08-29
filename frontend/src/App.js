@@ -1,16 +1,23 @@
 import "./App.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import Landing from "./screens/LandingPage/landingPage";
+import { BrowserRouter, Route } from "react-router-dom";
+import landingPage from "./screens/LandingPage/landingPage";
+import myNotes from "./screens/MyNotes/myNotes";
+import myProfile from "./screens/MyProfile/myProfile";
 
 function App() {
   return (
     <>
-      <Header />
-      <main>
-        <Landing />
-      </main>
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <main>
+          <Route path="/" component={landingPage} exact />
+          <Route path="/mynotes" component={myNotes} />
+          <Route path="/myprofile" component={myProfile} />
+        </main>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }

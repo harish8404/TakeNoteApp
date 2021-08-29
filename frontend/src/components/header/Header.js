@@ -7,6 +7,7 @@ import {
   Form,
   FormControl,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -25,10 +26,13 @@ const Header = () => {
             </Form>
           </Nav>
           <Nav>
-            <Nav.Link href="#home">My Notes</Nav.Link>
+            <Nav.Link href="/mynotes">
+              {/* <Link to="/mynotes">My Notes</Link> */}
+              My Notes
+            </Nav.Link>
             <NavDropdown title="Harish" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">My Profile</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Log Out</NavDropdown.Item>
+              <NavDropdown.Item href="/myprofile">My Profile</NavDropdown.Item>
+              <NavDropdown.Item href="/">Log Out</NavDropdown.Item>
               {/* <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link
