@@ -1,8 +1,15 @@
-import React from "react";
+// import React, { useEffect } from "react";
 import { Button, Container, Row } from "react-bootstrap";
 import "./landingPage.css";
 
 const landingPage = () => {
+  // useEffect(() => {
+  //   const userInfo = localStorage.getItem("userInfo");
+  //   if (userInfo) {
+  //     history.pushState("/mynotes");
+  //   }
+  // }, []);
+
   return (
     <div className="main">
       <Container>

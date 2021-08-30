@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainScreen.css";
-import { Button, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 const MainScreen = ({ title, children }) => {
   return (
