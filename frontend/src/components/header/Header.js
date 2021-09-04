@@ -7,9 +7,16 @@ import {
   Form,
   FormControl,
 } from "react-bootstrap";
-// import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Header = () => {
+  const history = useHistory();
+
+  const logOut = () => {
+    localStorage.removeItem("userInfo");
+    history.push("/");
+  };
+
   return (
     <Navbar bg="primary" expand="lg" variant="dark">
       <Container>
@@ -32,11 +39,8 @@ const Header = () => {
             </Nav.Link>
             <NavDropdown title="Harish" id="basic-nav-dropdown">
               <NavDropdown.Item href="/myprofile">My Profile</NavDropdown.Item>
-              <NavDropdown.Item href="/">Log Out</NavDropdown.Item>
-              {/* <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item> */}
+              <NavDropdown.Divider />
+              <NavDropdown.Item onClick={logOut}>Log Out</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
